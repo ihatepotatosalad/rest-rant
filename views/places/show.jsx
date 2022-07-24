@@ -13,6 +13,8 @@ function show(data) {
                 <h3>not yet</h3>
                 <h2>Comment </h2>
                 <h3>not yet</h3>
+                <h2>cuisines </h2>
+                <h3>{`${data.place.cuisines}`}</h3>
                 <a href={`/places/${data.id}/edit`} className="btn btn-warning">
                     Edit
                 </a>
