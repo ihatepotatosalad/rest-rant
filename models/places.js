@@ -10,7 +10,8 @@ const placeSchema = new mongoose.Schema({
         type: Number,
         min: [1673, 'Surley not that old??'],
         max: [new Date().getFullYear(), 'hey this year is in the future']
-    }
+    },
+    comments: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Comment' }]
 })
 placeSchema.methods.showEstablished = function () {
     return `${this.name} has been serving the people of ${this.city},${this.state} since ${this.founded}`
